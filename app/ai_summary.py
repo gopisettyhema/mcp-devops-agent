@@ -1,6 +1,8 @@
 import google.generativeai as genai
 import os
 
+print(os.getenv("GEMINI_API_KEY"))  # debug
+
 # Configure API key
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
@@ -24,7 +26,7 @@ def summarize_issues(issues):
     {issue_text}
     """
 
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-pro")
 
     response = model.generate_content(prompt)
 

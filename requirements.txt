@@ -3,5 +3,4 @@ uvicorn
 requests
 python-dotenv
 google-generativeai
-streamlit
 requests
